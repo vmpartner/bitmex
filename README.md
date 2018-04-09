@@ -1,5 +1,5 @@
 # Bitmex API
-Packages for work with bitmex rest and websocket API on golang
+Packages for work with bitmex rest and websocket API on golang.  
 Target of this packages make easy access to bitmex API including testnet platform.  
 
 Packages covered tests.  
