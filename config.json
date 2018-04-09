@@ -1,0 +1,13 @@
+{
+  "IsDev": false,
+  "Master": {
+    "Host": "www.bitmex.com",
+    "Key": "123",
+    "Secret": "abc"
+  },
+  "Dev": {
+    "Host": "testnet.bitmex.com",
+    "Key": "123",
+    "Secret": "abc"
+  }
+}
