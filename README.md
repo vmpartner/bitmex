@@ -66,6 +66,6 @@ I spent a lot of time implementing this packages and will be glad of any support
 eth: 0x3e9b92625c49Bfd41CCa371D1e4A1f0d4c25B6fC
 btc: 35XDoFSA8QeM26EnCyhQPTMBZm4S1DvncE
 ```
-
+vmpartner[a]gmail.com
 
 
