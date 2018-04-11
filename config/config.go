@@ -3,13 +3,28 @@ package config
 import (
 	"os"
 	"encoding/json"
-	"gitlab.com/vitams/bitmex/tools"
+	"github.com/vmpartner/bitmex/tools"
 )
 
 type Config struct {
 	Host   string
 	Key    string
 	Secret string
+	DB struct {
+		Host     string
+		Login    string
+		Password string
+		Name     string
+	}
+	Neural struct {
+		Iterations int
+		Predict    float64
+	}
+	Strategy struct {
+		Profit   float64
+		StopLose float64
+		Quantity float32
+	}
 }
 
 type MasterConfig struct {
