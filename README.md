@@ -93,11 +93,9 @@ go func() {
 Example of usage look in main.go
 
 ## More
-Those who will donated more $50 i will send my working private code bot based on neural analyze.  
 I spent a lot of time implementing this packages and will be glad of any support. Thank you!
 ```
 eth: 0x3e9b92625c49Bfd41CCa371D1e4A1f0d4c25B6fC
 btc: 35XDoFSA8QeM26EnCyhQPTMBZm4S1DvncE
 ```
-
-
+Those who will donated more $50 i will send my working private code bot based on neural analyze.
