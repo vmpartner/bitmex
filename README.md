@@ -20,6 +20,20 @@ ctx := rest.MakeContext(cfg.Key, cfg.Secret, cfg.Host)
 w, response, err := rest.GetWallet(ctx)
 tools.CheckErr(err)
 fmt.Printf("Status: %v, wallet amount: %v\n", response.StatusCode, w.Amount)
+
+// Place order
+params := map[string]interface{}{
+    "side":     "Buy",
+    "symbol":   "XBTUSD",
+    "ordType":  "Limit",
+    "orderQty": 1,
+    "price":    9000,
+    "clOrdID":  "MyUniqID_123",
+    "execInst": "ParticipateDoNotInitiate",
+}
+order, response, err := rest.NewOrder(app.Context, params)
+tools.CheckErr(err)
+fmt.Printf("Order: %+v, Response: %+v\n", order, response)
 ```
 
 #### Websocket
@@ -49,8 +63,27 @@ go func() {
         res, err := bitmex.DecodeMessage(message)
         tools.CheckErr(err)
 
-        // Your logic here
-        fmt.Printf("%+v\n", res)
+        // Business logic
+        switch res.Table {
+        case "orderBookL2":
+            if res.Action == "partial" {
+                // Update table
+            } else {
+                // Update row
+            }
+        case "order":
+            if res.Action == "partial" {
+                // Update table
+            } else {
+                // Update row
+            }
+        case "position":
+            if res.Action == "partial" {
+                // Update table
+            } else {
+                // Update row
+            }
+        }
     }
 }()
 
@@ -66,6 +99,5 @@ I spent a lot of time implementing this packages and will be glad of any support
 eth: 0x3e9b92625c49Bfd41CCa371D1e4A1f0d4c25B6fC
 btc: 35XDoFSA8QeM26EnCyhQPTMBZm4S1DvncE
 ```
-vmpartner[a]gmail.com
 
 
