@@ -17,9 +17,9 @@ cfg := config.LoadConfig("config.json")
 ctx := rest.MakeContext(cfg.Key, cfg.Secret, cfg.Host)
 
 // Get wallet
-w, response, err := rest.GetWallet(ctx)
+wallet, response, err := rest.GetWallet(ctx)
 tools.CheckErr(err)
-fmt.Printf("Status: %v, wallet amount: %v\n", response.StatusCode, w.Amount)
+fmt.Printf("Status: %v, wallet amount: %v\n", response.StatusCode, wallet.Amount)
 
 // Place order
 params := map[string]interface{}{
@@ -31,7 +31,7 @@ params := map[string]interface{}{
     "clOrdID":  "MyUniqID_123",
     "execInst": "ParticipateDoNotInitiate",
 }
-order, response, err := rest.NewOrder(app.Context, params)
+order, response, err := rest.NewOrder(ctx, params)
 tools.CheckErr(err)
 fmt.Printf("Order: %+v, Response: %+v\n", order, response)
 ```
