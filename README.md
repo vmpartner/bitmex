@@ -1,3 +1,5 @@
+! Please give a star if the project was useful to you  
+
 # Bitmex API
 Packages for work with bitmex rest and websocket API on golang.  
 Target of this packages make easy access to bitmex API including testnet platform.  
