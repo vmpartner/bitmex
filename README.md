@@ -1,12 +1,6 @@
-! Please give a star if the project was useful to you  
-
 # Bitmex API
 Packages for work with bitmex rest and websocket API on golang.  
-Target of this packages make easy access to bitmex API including testnet platform.  
-
-Packages covered tests.  
-
-In rest package implemented basic must have methods, you can easy add needed method by extending rest package. Autocomplete working based on swagger bitmex package. Please contribute if you will add new methods.
+Target of this packages make easy access to bitmex API including testnet platform.
 
 
 ## Usage
@@ -95,9 +89,8 @@ go func() {
 Example of usage look in main.go
 
 ## More
-I spent a lot of time implementing this packages and will be glad of any support. Thank you!
+I will be glad of any support. Thank you!
 ```
 eth: 0x3e9b92625c49Bfd41CCa371D1e4A1f0d4c25B6fC
 btc: 35XDoFSA8QeM26EnCyhQPTMBZm4S1DvncE
 ```
-Those who will donated more $50 i will send my working private code bot based on neural analyze.
