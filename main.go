@@ -1,13 +1,13 @@
 package main
 
 import (
+	"fmt"
+	"github.com/vmpartner/bitmex/bitmex"
 	"github.com/vmpartner/bitmex/config"
 	"github.com/vmpartner/bitmex/rest"
-	"github.com/vmpartner/bitmex/websocket"
-	"fmt"
-	"strings"
-	"github.com/vmpartner/bitmex/bitmex"
 	"github.com/vmpartner/bitmex/tools"
+	"github.com/vmpartner/bitmex/websocket"
+	"strings"
 )
 
 // Usage example
@@ -15,7 +15,7 @@ func main() {
 
 	// Load config
 	cfg := config.LoadConfig("config.json")
-	ctx := rest.MakeContext(cfg.Key, cfg.Secret, cfg.Host)
+	ctx := rest.MakeContext(cfg.Key, cfg.Secret, cfg.Host, cfg.Timeout)
 
 	// Get wallet
 	w, response, err := rest.GetWallet(ctx)

@@ -6,11 +6,12 @@ import (
 	"net/http"
 )
 
-func MakeContext(key string, secret string, host string) context.Context {
+func MakeContext(key string, secret string, host string, timeout int64) context.Context {
 	return context.WithValue(context.TODO(), swagger.ContextAPIKey, swagger.APIKey{
-		Key:    key,
-		Secret: secret,
-		Host:   host,
+		Key:     key,
+		Secret:  secret,
+		Host:    host,
+		Timeout: timeout,
 	})
 }
 

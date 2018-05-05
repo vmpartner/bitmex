@@ -3,11 +3,13 @@
   "Master": {
     "Host": "www.bitmex.com",
     "Key": "123",
-    "Secret": "abc"
+    "Secret": "abc",
+    "Timeout": 20
   },
   "Dev": {
     "Host": "testnet.bitmex.com",
     "Key": "123",
-    "Secret": "abc"
+    "Secret": "abc",
+    "Timeout": 20
   }
 }

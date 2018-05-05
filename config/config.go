@@ -1,16 +1,17 @@
 package config
 
 import (
-	"os"
 	"encoding/json"
 	"github.com/vmpartner/bitmex/tools"
+	"os"
 )
 
 type Config struct {
-	Host   string
-	Key    string
-	Secret string
-	DB struct {
+	Host    string
+	Key     string
+	Secret  string
+	Timeout int64
+	DB      struct {
 		Host     string
 		Login    string
 		Password string
