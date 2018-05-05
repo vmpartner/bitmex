@@ -1,10 +1,6 @@
 # Bitmex API
 Packages for work with bitmex rest and websocket API on golang.  
-Target of this packages make easy access to bitmex API including testnet platform.  
-
-Packages covered tests.  
-
-In rest package implemented basic must have methods, you can easy add needed method by extending rest package. Autocomplete working based on swagger bitmex package. Please contribute if you will add new methods.
+Target of this packages make easy access to bitmex API including testnet platform.
 
 
 ## Usage
@@ -17,9 +13,9 @@ cfg := config.LoadConfig("config.json")
 ctx := rest.MakeContext(cfg.Key, cfg.Secret, cfg.Host)
 
 // Get wallet
-w, response, err := rest.GetWallet(ctx)
+wallet, response, err := rest.GetWallet(ctx)
 tools.CheckErr(err)
-fmt.Printf("Status: %v, wallet amount: %v\n", response.StatusCode, w.Amount)
+fmt.Printf("Status: %v, wallet amount: %v\n", response.StatusCode, wallet.Amount)
 
 // Place order
 params := map[string]interface{}{
@@ -31,7 +27,7 @@ params := map[string]interface{}{
     "clOrdID":  "MyUniqID_123",
     "execInst": "ParticipateDoNotInitiate",
 }
-order, response, err := rest.NewOrder(app.Context, params)
+order, response, err := rest.NewOrder(ctx, params)
 tools.CheckErr(err)
 fmt.Printf("Order: %+v, Response: %+v\n", order, response)
 ```
@@ -93,9 +89,8 @@ go func() {
 Example of usage look in main.go
 
 ## More
-I spent a lot of time implementing this packages and will be glad of any support. Thank you!
+I will be glad of any support. Thank you!
 ```
 eth: 0x3e9b92625c49Bfd41CCa371D1e4A1f0d4c25B6fC
 btc: 35XDoFSA8QeM26EnCyhQPTMBZm4S1DvncE
 ```
-Those who will donated more $50 i will send my working private code bot based on neural analyze.
