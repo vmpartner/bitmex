@@ -5,12 +5,12 @@ import (
 )
 
 type Response struct {
-	Success   bool        `json:"success,omitempty"`
-	Subscribe string      `json:"subscribe,omitempty"`
-	Request   interface{} `json:"request,omitempty"`
-	Table     string      `json:"table,omitempty"`
-	Action    string      `json:"action,omitempty"`
-	Data      interface{} `json:"data,omitempty"`
+	Success   bool            `json:"success,omitempty"`
+	Subscribe string          `json:"subscribe,omitempty"`
+	Request   interface{}     `json:"request,omitempty"`
+	Table     string          `json:"table,omitempty"`
+	Action    string          `json:"action,omitempty"`
+	Data      json.RawMessage `json:"data,omitempty"`
 }
 
 func DecodeMessage(message []byte) (Response, error) {
